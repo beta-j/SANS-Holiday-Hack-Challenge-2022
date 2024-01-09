@@ -2,7 +2,7 @@
 ## 2A - Wireshark Practice ##
 
 ### OBJECTIVE : ###
->Use the Wireshark Phishing terminal in the Tolkien Ring to solve the mysteries around the [suspicious PCAP](https://storage.googleapis.com/hhc22_player_assets/suspicious.pcap). Get hints for this challenge by typing _hint_ in the upper panel of the terminal.
+>Use the Wireshark Phishing terminal in the Tolkien Ring to solve the mysteries around the [suspicious PCAP](Assets/suspicious.pcap). Get hints for this challenge by typing _hint_ in the upper panel of the terminal.
 #  
 
 ## HINTS: ##
