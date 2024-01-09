@@ -7,7 +7,7 @@
 
 ## HINTS: ##
 <details>
-  <summary>Hints provided for Objective 3A</summary>
+  <summary>Hints provided for Objective 3B</summary>
   
 >-  Were you able to `mount` up?  If so, users’ `home/` directories can be a great place to look for secrets...
 >-	When users are over-privileged, they can often act as root.  When *containers* have too many permissions, they can affect the host!
