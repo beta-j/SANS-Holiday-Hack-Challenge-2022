@@ -7,7 +7,7 @@
 
 ## HINTS: ##
 <details>
-  <summary>Hints provided for Objective 2</summary>
+  <summary>Hints provided for Objective 2A</summary>
   
 >-	[https://unit42.paloaltonetworks.com/using-wireshark-exporting-objects-from-a-pcap/](https://unit42.paloaltonetworks.com/using-wireshark-exporting-objects-from-a-pcap/)
 >-	We’re looking for a protocol like FTP, HTTP, SMB, etc.
