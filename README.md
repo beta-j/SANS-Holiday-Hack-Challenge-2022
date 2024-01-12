@@ -57,5 +57,16 @@ This was my fifth time participating in the Holiday Hack Challenge and the third
 
 [OBJECTIVE 5 - Recover the Cloud Ring](OBJECTIVE%205%20-%20Recover%20the%20Cloud%20Ring)
 
-OBJECTIVE 5A - AWS CLI Intro
+-  [OBJECTIVE 5A - AWS CLI Intro](OBJECTIVE%205%20-%20Recover%20the%20Cloud%20Ring/OBJECTIVE_5A-AWS_CLI_Intro.md)
 
+-  [OBJECTIVE 5B - Trufflehog Search](OBJECTIVE%205%20-%20Recover%20the%20Cloud%20Ring/OBJECTIVE_5B-Trufflehog_Search.md)
+
+[OBJECTIVE 6 - Recover the Buringin Ring of Fire](OBJECTIVE%206%20-%20Recover%20the%20Burning%20Ring%20of%20Fire)
+
+-  [OBJECTIVE 6A - Buy a Hat](OBJECTIVE%206%20-%20Recover%20the%20Burning%20Ring%20of%20Fire/OBJECTIVE_6A-Buy_a_Hat.md)
+
+-  [OBJECTIVE 6B - Blockchain Divination](OBJECTIVE%206%20-%20Recover%20the%20Burning%20Ring%20of%20Fire/OBJECTIVE_6B-Blockchain_Divination.md)
+
+[THE END](_The_End.md)
+
+[BONUS Objective - Santa Magic](BONUS OBJECTIVE-Santa_Magic.md)
