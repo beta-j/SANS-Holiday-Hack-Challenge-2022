@@ -67,6 +67,9 @@ This was my fifth time participating in the Holiday Hack Challenge and the third
 
 -  [OBJECTIVE 6B - Blockchain Divination](OBJECTIVE%206%20-%20Recover%20the%20Burning%20Ring%20of%20Fire/OBJECTIVE_6B-Blockchain_Divination.md)
 
+-  [OBJECTIVE 6C - Exploit a Smart Contract](OBJECTIVE%206%20-%20Recover%20the%20Burning%20Ring%20of%20Fire/OBJECTIVE_6C-Exploit_a_Smart_Contract.md)
+
+
 [THE END](_The_End.md)
 
 [BONUS Objective - Santa Magic](BONUS OBJECTIVE-Santa_Magic.md)
