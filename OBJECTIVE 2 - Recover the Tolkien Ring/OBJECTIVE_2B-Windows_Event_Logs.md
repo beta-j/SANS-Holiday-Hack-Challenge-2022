@@ -1,4 +1,4 @@
-# OBJECTIVE 2 - Recover the Tolien Ring #
+# OBJECTIVE 2 - Recover the Tolkien Ring #
 ## 2B - Windows Event Logs ##
 
 ### OBJECTIVE : ###
