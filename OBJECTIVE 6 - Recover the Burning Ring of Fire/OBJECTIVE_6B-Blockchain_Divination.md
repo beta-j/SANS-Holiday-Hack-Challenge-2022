@@ -1,4 +1,4 @@
-# OBJECTIVE 6 - Recover the Buringin Ring of Fire #
+# OBJECTIVE 6 - Recover the Burining Ring of Fire #
 ## 6B - Blockchain Divination ##
 
 ### OBJECTIVE : ###
