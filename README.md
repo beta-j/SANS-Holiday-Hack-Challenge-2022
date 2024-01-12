@@ -61,7 +61,7 @@ This was my fifth time participating in the Holiday Hack Challenge and the third
 
 -  [OBJECTIVE 5B - Trufflehog Search](OBJECTIVE%205%20-%20Recover%20the%20Cloud%20Ring/OBJECTIVE_5B-Trufflehog_Search.md)
 
-[OBJECTIVE 6 - Recover the Buringin Ring of Fire](OBJECTIVE%206%20-%20Recover%20the%20Burning%20Ring%20of%20Fire)
+[OBJECTIVE 6 - Recover the Burining Ring of Fire](OBJECTIVE%206%20-%20Recover%20the%20Burning%20Ring%20of%20Fire)
 
 -  [OBJECTIVE 6A - Buy a Hat](OBJECTIVE%206%20-%20Recover%20the%20Burning%20Ring%20of%20Fire/OBJECTIVE_6A-Buy_a_Hat.md)
 
