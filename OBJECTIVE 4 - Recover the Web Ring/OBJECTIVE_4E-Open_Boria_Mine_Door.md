@@ -25,12 +25,12 @@ For Pin2 I could see by examining the code, that the input accepts html (There�
 Next, I figured that I could use html tags to render svg shapes.  By looking at the sources for the frame I could determine that each black box had a width of 200 pixels and height of 170 pixels and so by using the input: ``<svg width=200 height=170><rect width=200 height=170 “fill:rgb(255,255,255)" /></svg>`` I was able to fill Pin2 entirely in white.
 
 Pin3 came this close to driving me crazy.  I tried all sorts of approaches and different svg shapes and techniques.  Until finally – just out of sheer desperation I changed the ``“fill:rgb(0,0,255)”`` of my code to ``“fill=”#0000FF”`` and it worked!  No idea why – but sometimes pen-testing is just about trying stuff until it works eh!  So the following code unlocks Pin3:
-```
+```html
 <svg width=200 height=170><rect width=200 height=170 fill=#0000FF /></svg>
 ```
 
 Pin4 attempts to filter out some special characters by using the `string.replace` JavaScript function.  This is easily bypassed since by using this function on its own, JavaScript will only replace the first matching value it finds. So, I was able to go around this very easily just by placing an extra `<>` in front of the input string.  Also, the svg code had to be modified slightly to draw two rectangles on top of each other now:
-```
+```html
 <><svg width=200 height=170><rect width=200 height=80 fill=white /><rect x=0 y=60 width=200 height=90 fill=blue /></svg>
 ```
 I also realised that if instead of clicking on the ‘GO’ button, I hit the enter key to submit the input, I could just pass on the html without prepending it with `<>` this seems to indicate that the input sanitisation is only happening when the **‘GO’** button is clicked.  In fact, on closer examination of the code we can see that the `sanitizeInput` script is being called by an `onblur` event.  
@@ -39,12 +39,12 @@ I also realised that if instead of clicking on the ‘GO’ button, I hit the en
 This means that the input text is sanitised as soon as the text box loses focus (eg. When the user clicks on another text box, presses TAB or clicks the ‘GO’ button.  However, if we simply submit the text by hitting the ENTER key the text box never loses focus and the sanitizeInput script is never called!
 
 Pin5 builds on the input sanitisation of Pin4 by adding the `/gi` modifier to the `string.replace` function which should make JavaScript match on every instance of `“`,`’`,`<` or `>`in the string.  But it still calls the `sanitizeInput` function with an `onblur` event.  So, we can simply submit our html by hitting the ENTER key.  The svg tag was modified to draw a blue box with a diagonal red line across it:
-```
+```html
 <svg width=200 height=170><rect width=200 height=170 fill=blue /><line x1=0 y1=130 x2=200 y2=45 stroke=red stroke-width=20 /></svg>>>
 ```
 
 This brings us to the final pin; Pin6.  Strangely enough it seems that this one doesn’t have any attempt at input sanitisation at all and we just need to modify the svg tag to unlock it:
-```
+```html
 <svg width=200 height=170><rect width=200 height=170 fill=blue /><line x1=0 y1=70 x2=200 y2=110 stroke=red stroke-width=20 /><line x1=0 y1=30 x2=200 y2=30 stroke=#00FF00 stroke-width=20 /></svg>
 ```
 
