@@ -17,7 +17,7 @@
 ## PROCEDURE : ##
 Just follow the on-screen instructions and read the help files:
 
-```
+```console
 elf@3634594c4105:~$ aws help
 elf@3634594c4105:~$ 
 elf@3634594c4105:~$ aws configure
