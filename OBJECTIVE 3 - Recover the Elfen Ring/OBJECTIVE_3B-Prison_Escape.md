@@ -21,7 +21,7 @@
 There is no root password so just by running ``sudo su`` we can elevate our user to root privileges.  By running `fdisk -l` we can confirm that the root filesystem is on `/dev/vda`.
 
 I used [this writeup](https://book.hacktricks.xyz/linux-hardening/privilege-escalation/docker-breakout/docker-breakout-privilege-escalation) for the next steps to create a new directory and mount `/dev/vda` to it:
-```
+```console
 # mkdir -p /mnt/hola
 # mount /dev/vda /mnt/hola
 # cd /mnt/hola/
