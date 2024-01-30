@@ -13,8 +13,8 @@ The terminal provides us with a Windows Powershell log export as a  text file ca
 >**Q1:**	 What month/day/year did the attack take place?  For example, `09/05/2021`
 
 **A1:**	First things first – let’s extract a list of dates found in the log file.  We can use `grep` with a regex expression for this:
-```
-Cat powershell.evtx.log | grep -o -E “[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}” | uniq | sort
+```console
+$ cat powershell.evtx.log | grep -o -E “[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}” | uniq | sort
 ```
 The `uniq` and `sort` commands are included to provide unique dates only for the time being and to sort them in order.  We can now grep for each individual date with the `-c` option to see how many times each date occurs in the log file.  By doing this we can tell that the largest amount of log entries where on Christmas eve:  **`12/24/2022`**
 
@@ -24,8 +24,8 @@ The `uniq` and `sort` commands are included to provide unique dates only for the
 >**Q2:**	An attacker got a secret from a file.  What was the original file’s name?
 
 **A2:**	By searching for log entries that happened on the 12/24/2022 and that contained the `Add-Content` powershell string we find out that someone replaced `honey` for `fish oil` in a file called **`Recipe.txt`**.
-```
-Cat powershell.evtx.log | grep 12/24/2022 -B 4 | grep Add-Content
+```console
+$ cat powershell.evtx.log | grep 12/24/2022 -B 4 | grep Add-Content
 ```
 ![image](https://github.com/beta-j/SANS-Holiday-Hack-Challenge-2022/assets/60655500/f0d27a5c-1cde-4e78-8f51-0a0c18766474)
 
