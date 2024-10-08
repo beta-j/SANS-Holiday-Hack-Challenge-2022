@@ -72,4 +72,4 @@ This was my fifth time participating in the Holiday Hack Challenge and the third
 
 [THE END](_The_End.md)
 
-[BONUS Objective - Santa Magic](BONUS OBJECTIVE-Santa_Magic.md)
+[BONUS Objective - Santa Magic](BONUS%20OBJECTIVE-Santa_Magic.md)
